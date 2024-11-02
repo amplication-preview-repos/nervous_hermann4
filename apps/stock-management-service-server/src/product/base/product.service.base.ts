@@ -36,4 +36,7 @@ export class ProductServiceBase {
   async deleteProduct(args: Prisma.ProductDeleteArgs): Promise<PrismaProduct> {
     return this.prisma.product.delete(args);
   }
+  async ArchiveProduct(args: string): Promise<string> {
+    throw new Error("Not implemented");
+  }
 }

@@ -197,4 +197,21 @@ export class ProductControllerBase {
       throw error;
     }
   }
+
+  @common.Patch("/:id/archive-product")
+  @swagger.ApiOkResponse({
+    type: String,
+  })
+  @swagger.ApiNotFoundResponse({
+    type: errors.NotFoundException,
+  })
+  @swagger.ApiForbiddenResponse({
+    type: errors.ForbiddenException,
+  })
+  async ArchiveProduct(
+    @common.Query()
+    query: string
+  ): Promise<string> {
+    return this.service.ArchiveProduct(query);
+  }
 }

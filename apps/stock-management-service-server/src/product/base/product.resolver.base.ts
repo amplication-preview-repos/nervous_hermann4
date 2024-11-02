@@ -141,4 +141,12 @@ export class ProductResolverBase {
       throw error;
     }
   }
+
+  @graphql.Query(() => String)
+  async ArchiveProduct(
+    @graphql.Args("args")
+    args: string
+  ): Promise<string> {
+    return this.service.ArchiveProduct(args);
+  }
 }
