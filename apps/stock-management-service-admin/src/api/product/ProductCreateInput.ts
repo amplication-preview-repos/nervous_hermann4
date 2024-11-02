@@ -1,1 +1,4 @@
-export type ProductCreateInput = {};
+export type ProductCreateInput = {
+  description?: string | null;
+  name?: string | null;
+};

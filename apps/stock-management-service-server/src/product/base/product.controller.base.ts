@@ -55,7 +55,9 @@ export class ProductControllerBase {
       data: data,
       select: {
         createdAt: true,
+        description: true,
         id: true,
+        name: true,
         updatedAt: true,
       },
     });
@@ -79,7 +81,9 @@ export class ProductControllerBase {
       ...args,
       select: {
         createdAt: true,
+        description: true,
         id: true,
+        name: true,
         updatedAt: true,
       },
     });
@@ -104,7 +108,9 @@ export class ProductControllerBase {
       where: params,
       select: {
         createdAt: true,
+        description: true,
         id: true,
+        name: true,
         updatedAt: true,
       },
     });
@@ -141,7 +147,9 @@ export class ProductControllerBase {
         data: data,
         select: {
           createdAt: true,
+          description: true,
           id: true,
+          name: true,
           updatedAt: true,
         },
       });
@@ -174,7 +182,9 @@ export class ProductControllerBase {
         where: params,
         select: {
           createdAt: true,
+          description: true,
           id: true,
+          name: true,
           updatedAt: true,
         },
       });
